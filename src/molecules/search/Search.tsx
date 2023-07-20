@@ -12,7 +12,7 @@ const Search = () => (
         Cualquier semana
       </div>
       <div className="text-sm pl-6 pr-2 text-gray-600 flex flex-row items-center gap-4">
-        <div className="hidden sm_block">Cuantos?</div>
+        <div className="hidden sm:block">¿Cuántos?</div>
         <div className="p-2 bg-rose-500 rounded-full text-white">
           <BiSearch size={18} />
         </div>
