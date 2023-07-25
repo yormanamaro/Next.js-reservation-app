@@ -1,6 +1,7 @@
 import { Open_Sans } from "next/font/google"; // Importacion derecta de fuentes desde google font.
 import Navbar from "@modules/navbar/Navbar"; // importacion de modulo con decoradores
-import "./globals.css";
+import RegisterModal from "@modules/modals/RegisterModal"; // Importamos el componente de REGISTRO MODAL
+import "./globals.css"; 
 
 // Gerarquia de atomic design
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<body className={font.className}>
 				<Navbar />
+				<RegisterModal />
 				{children}
 			</body>
 		</html>
