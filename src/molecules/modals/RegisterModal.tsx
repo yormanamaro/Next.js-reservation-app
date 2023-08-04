@@ -3,7 +3,7 @@ import React from "react"
 import axios from "axios"; // importamos manejador de apis
 import { useState } from "react"; // imprtamos hook
 import { toast } from "react-hot-toast"; // para manejo de notificaciones.
-import { FieldValue, FieldValues, SubmitHandler, useForm } from "react-hook-form"; // para manejo de formularios
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form"; // para manejo de formularios
 import { FcGoogle } from "react-icons/fc"; // importamos logo de google
 import Modal from "@modules/modals/Modal"; // importacion de componentes
 import Heading from "@modules/heading/Heading"; // importacion de componenetes 
@@ -48,9 +48,9 @@ const RegisterModal = () => { // tener en cuenta que este es un componente state
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Te damos la bienvenida a Airbnb" subtitle="Crea una cuenta!" />
-      <Input id="email" label="Correo" disable={isLoading} register={register} errors={errors} required /> 
-      <Input id="name" label="Nombre" disable={isLoading} register={register} errors={errors} required />
-      <Input id="password" label="Password" disable={isLoading} register={register} errors={errors} required />
+      <Input id="email" label="Correo" disabled={isLoading} register={register} errors={errors} required /> 
+      <Input id="name" label="Nombre" disabled={isLoading} register={register} errors={errors} required />
+      <Input id="password" label="Password" disabled={isLoading} register={register} errors={errors} required />
     </div> 
   );
 

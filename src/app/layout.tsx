@@ -1,6 +1,8 @@
 import { Open_Sans } from "next/font/google"; // Importacion derecta de fuentes desde google font.
+import ClientProcessor from "@modules/clientProcessor/ClientProcessor";
 import Navbar from "@modules/navbar/Navbar"; // importacion de modulo con decoradores
 import RegisterModal from "@modules/modals/RegisterModal"; // Importamos el componente de REGISTRO MODAL
+import ToasterProvider from "@providers/ToasterProvider";
 import "./globals.css"; 
 
 // Gerarquia de atomic design
@@ -18,9 +20,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		// aqui se va a apuntar a la constante font que creamos y nuestros modulos de la app
 		<html lang="en">
 			<body className={font.className}>
-				<Navbar />
-				<RegisterModal />
-				{children}
+				<ClientProcessor>
+					<ToasterProvider />
+					<RegisterModal />
+					<Navbar />
+					{children}	
+				</ClientProcessor>	
 			</body>
 		</html>
 	);

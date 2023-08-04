@@ -1,4 +1,4 @@
-import { FieldError, UseFormRegister, FieldValues } from "react-hook-form";
+import { FieldErrors, UseFormRegister, FieldValues } from "react-hook-form";
 
 export default interface InputProps {
     id: string;
@@ -8,5 +8,5 @@ export default interface InputProps {
     formatPrice?: boolean;
     required?: boolean;
     register: UseFormRegister<FieldValues>
-    errors:  FieldError
+    errors: FieldErrors;
 }
