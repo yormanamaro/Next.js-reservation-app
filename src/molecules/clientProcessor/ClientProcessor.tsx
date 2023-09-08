@@ -4,7 +4,7 @@ import ClientProcessorProps from "@modules/clientProcessor/interfaces/clientProc
 
 const ClientProcessor: React.FC<ClientProcessorProps> = ({ children}) => {
   // estado local
-  const [hastMopunted, setHastMopunted] = useState(false);
+  const [hastMopunted, setHastMopunted] = useState(false); // para controlar las cargas
 
   useEffect(() => {
     setHastMopunted(true);
